@@ -1,0 +1,21 @@
+<?php
+function sandbox_menu() {
+ 
+  $items['test'] = array(
+    'title' => 'Example RSS feed',
+    'page callback' => 'sandbox_content',
+    'access arguments' => array(
+      'access content',
+    ),
+    'type' => MENU_CALLBACK,
+  );
+  return $items;
+}
+
+function sandbox_content()
+{
+
+	return ('hello');
+	//return drupal_json_output('hello');
+
+}
